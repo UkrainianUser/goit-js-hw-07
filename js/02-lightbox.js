@@ -17,18 +17,4 @@ const createGalleryItems = items => {
 
 galleryEl.insertAdjacentHTML('beforeend', createGalleryItems(galleryItems));
 
-galleryEl.addEventListener('click', onGalleryItemsClick);
-
-function onGalleryItemsClick (evt) {
-   evt.preventDefault();
-   if (evt.target.nodeName !== 'IMG') {
-   return; 
-   }
-
-	let gallery = new SimpleLightbox('.gallery__item');
-		gallery.on('show.simplelightbox', function () {
-		gallery.defaultOptions.captionDelay = 250;
-	});
-
-	console.dir(gallery);
-}
+let gallery = new SimpleLightbox('.gallery__item', {captionDelay:  250});

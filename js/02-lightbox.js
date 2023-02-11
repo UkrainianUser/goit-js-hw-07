@@ -25,16 +25,10 @@ function onGalleryItemsClick (evt) {
    return; 
    }
 
-	let gallery = new SimpleLightbox('.gallery a');
-	gallery.on('show.simplelightbox', function () {
+	let gallery = new SimpleLightbox('.gallery__item');
+		gallery.on('show.simplelightbox', function () {
+		gallery.defaultOptions.captionDelay = 250;
 	});
 
 	console.dir(gallery);
 }
-
-
-/*
-<a class="gallery__item" href="large-image.jpg">
-	<img class="gallery__image" src="small-image.jpg" alt="Image description" />
-</a>
-*/

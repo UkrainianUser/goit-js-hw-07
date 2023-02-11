@@ -1,0 +1,8 @@
+{
+  "editor.fontSize": 12,
+  "scm.inputFontSize": 11,
+  "markdown.preview.fontSize": 12,
+  "notebook.outputLineHeight": 17,
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.lineHeight": 1
+}

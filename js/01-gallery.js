@@ -22,8 +22,11 @@ galleryEl.addEventListener('click', onGalleryItemsClick);
 function onGalleryItemsClick (evt) {
     evt.preventDefault();
     if (evt.target.nodeName !== 'IMG') {
-       return; 
+    return; 
     }
-    
-    return console.log(evt.target.getAttribute('data-source'));
+
+    const instance = basicLightbox.create(
+        `<img src="${evt.target.dataset.source}">`)
+        .show()
+
 }
